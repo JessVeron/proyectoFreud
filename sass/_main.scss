@@ -1,0 +1,124 @@
+
+/*body general*/
+
+.fondo {
+    @include flex-direction-center (absolute);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(../assets/images/imagenFondo.jpg);
+    background-size: contain;
+ 
+  
+}
+
+/*página principal*/
+
+.video {
+    @include flex-direction-center (relative);
+    height: 100%;
+   
+}
+
+/*páginas cobras y tienda*/
+
+
+.card {
+    display: inline-block;
+    width: 16rem;
+    margin: map-get($margenes, margen3 );
+    padding: 1rem;
+    border-color: map-get($colores, azul);
+    background-color: map-get($colores, color-secundario);
+    font-family: $fuente-regular;
+    font-size: $tamanio-fuente-chica;
+    text-align: $texto-align-center;
+    color:map-get($colores, color-primario);
+    justify-content: space-around;
+    align-self: center;
+    cursor: pointer;
+}
+
+
+
+.btn {
+    color:map-get($colores, azul);
+    background-color: map-get($colores,color-botones) ;
+    border-color: #085b00;
+    font-family: $fuente-regular;
+    margin-bottom:map-get($margenes, margen3 ); 
+}
+
+
+
+/*página contacto*/
+
+
+.formulario {
+    position: $posicion-relativa;
+    margin: auto;
+    background-image: url(../assets/images/cartaFondo.jpg) ;
+    background-repeat: no-repeat;
+    background-position:center;
+    font-family: $fuente-regular;
+    font-size: $tamanio-fuente-chica;
+    text-align: $texto-align-center;
+    font-weight: $negrita;
+    color: map-get($colores, color-secundario);
+    justify-content: space-around;
+    width:100% /3;
+    margin-bottom: 5rem;
+    .formularioCaja {
+        margin-top: map-get($margenes, margen2 ); 
+        margin-bottom: map-get($margenes, margen1 );
+       
+    }
+}
+
+
+.seccionMapa{
+    display: flex;
+    justify-content: $contenido-centrado;
+    align-items: $contenido-alineado;
+    margin-bottom: 5rem;
+    .mapa{
+     width: $ancho/2;
+     margin-bottom: map-get($margenes, margen2 );
+   }
+}
+
+.row {
+    margin:map-get($margenes, margen0 );
+    padding: 0;
+}
+
+
+
+
+/*página error*/
+
+
+
+.fondoSecundario {
+    background-image: $gradiente ;
+    
+    .gridContenedor{
+   
+    display: grid;
+    height: 100vh;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit);
+    font-family:  $fuente-cursiva;
+    text-align: $texto-align-center;
+    justify-content: $contenido-centrado;
+    font-size: $tamanio-fuente-grande ;
+    color: map-get($colores, color-primario);
+    .parrafoError .fotoError {
+        display: grid;
+        place-items: center;
+        text-align: $texto-align-center;
+        justify-content: $contenido-centrado;
+        align-content: $contenido-alineado;
+        
+       
+    }
+      
+  }
+}

@@ -1,0 +1,21 @@
+
+@mixin flex-direction-center ($position){
+    display:$display-flex;
+    flex-direction:$flex-direction-columna;
+    justify-content:$contenido-centrado;
+    align-content: $contenido-alineado;
+    width: $ancho;
+    position: $position;
+}
+
+@mixin fuente-general ($alineadoTexto, $decoracion: $subrayado, $tamaño: $tamanio-fuente-chica) {
+    font-family: $fuente-regular;
+    font-size: $tamaño;
+    text-align: $alineadoTexto;
+    text-decoration: $decoracion;
+    margin-left: map-get($margenes, margen2 );
+    color: map-get($colores, color-primario);
+    
+}
+
+
